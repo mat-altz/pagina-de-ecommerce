@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pagina de ecommerce</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="">Inicio</a>
+            <a href="">Sobre</a>
+            <a href="Contato/indexcontato.html">Contatos</a>
+        </div>
+        <div id="menu">
+            <p onclick="openNav()">&#9776; Menu</p>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <h1>Seja bem vindo ao nosso ecommerce com javascript</h1>
+            <p>Encontre aqui o seu produto</p>
+            <button onclick="botao()"><span class="toggle-button">Detalhes dos cursos</span></button>
+        </section>
+        <section class="products">
+            <h2>Produtos em destaque</h2>
+            <div class="product-grid">
+                <!--Aqui serão inseridos os produtos-->
+            </div>
+        </section>
+
+        <section id="cart">
+            <h2>Carrinho de compras</h2>
+            <table>
+                <thread>
+                    <tr>
+                        <th>Produto</th>
+                        <th>Quantidade</th>
+                        <th>Preço</th>
+                        <th>Subtotal</th>
+                    </tr>
+                </thread>
+                <tbody>
+                    <!--Aqui serão inseridos os itens do carrinho-->
+                </tbody>
+            </table>
+            <p>Total:<span id="total">R$0.00</span></p>
+            <button id="checkout">Pagar</button>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; Tarefa - página Ecommerce v2</p>
+       <img src="img/product1.png" alt="">
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

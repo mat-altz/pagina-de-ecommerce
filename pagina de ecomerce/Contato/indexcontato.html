@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tarefa-formulario</title>
+    <link rel="stylesheet" href="estilocontato.css">
+</head>
+<body>
+    <header>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="javascript:history.back()">Inicio</a>
+            <a href="#">Sobre</a>
+            <a href="Contato/indexcontato.html">Contatos</a>
+        </div>
+        <div id="menu">
+            <p onclick="openNav()">&#9776; Menu</p>
+        </div>
+    </header>
+    <section id="formulario">
+        <div class="container">
+            <h2>Preencha os dados abaixo:</h2>
+            <form action="#" mathod="POST">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="data">Data de nascimento</label>
+                <input type="date" name="data" id="data" required>
+
+                <label for="email">Deixe seu recado: (opcional)</label>
+                <textarea id="message" name="message" rows="4"></textarea>
+
+                <input type="submit" value="Enviar" onclick="enviar()">
+            </form>
+        </div>
+    </section>
+</body>
+<script>
+    
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("menu").style.marginLeft = "250px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("menu").style.marginLeft= "0";
+    }
+
+    function enviar(){
+        let n = document.getElementById('name')
+        let nome = String(n.value)
+        let e = document.getElementById('email')
+        let email = String(e.value)
+        let d = document.getElementById('data')
+        let data = String(d.value)
+
+        if(nome.length == 0 || email.length == 0 || data.length == 0){
+
+        }else{
+            window.alert(`Os dados enviados foram: \n Nome: ${nome} \n email: ${email} \n Data de nascimento: ${data}\n Agradecemos a sua participação`)
+        }
+    }
+</script>
+</html>
